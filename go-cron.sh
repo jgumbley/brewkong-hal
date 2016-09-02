@@ -5,5 +5,5 @@ cd /opt/brewkong-hal/
 
 git pull origin master
 
-ansible all -i "localhost," -c local -m shell -a 'echo hello world'
+ansible all -i "localhost," -c local -m shell -a 'echo yo blair'
 
