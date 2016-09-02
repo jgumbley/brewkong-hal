@@ -7,6 +7,7 @@ apt -y install ansible git
 
 cd /opt/
 git clone https://github.com/jgumbley/brewkong-hal.git
+git pull origin master
 
 cd
 crontab -l > .mycron.bak
