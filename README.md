@@ -1,6 +1,6 @@
 Brewkong HAL9000
 ----------------
 
-`sudo bash <(curl -s https://raw.githubusercontent.com/jgumbley/brewkong-hal/master/go.sh)`
+`curl https://raw.githubusercontent.com/jgumbley/brewkong-hal/master/go.sh | sudo bash`
 
 Hello Dave
