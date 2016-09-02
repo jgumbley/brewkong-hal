@@ -1,5 +1,7 @@
 #!/bin/bash
 
-apt-get install ansible
-echo hello dave, ive installed ansible
+echo hello dave
+
+apt-get install ansible -y
+
 
