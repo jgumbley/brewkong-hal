@@ -3,6 +3,7 @@
 echo hello dave :P
 echo -------------------------------------
 
+apt update
 apt -y install ansible git
 
 rm /opt/brewkong-hal/
