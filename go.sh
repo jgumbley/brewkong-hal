@@ -2,6 +2,6 @@
 
 echo hello dave :P
 
-apt install -y ansible
+apt -y install ansible
 
 
