@@ -1,4 +1,4 @@
-mport urwid
+import urwid
 
 def exit_on_q(key):
     if key in ('q', 'Q'):
