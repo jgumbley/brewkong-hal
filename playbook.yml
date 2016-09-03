@@ -3,14 +3,16 @@
   hosts: all 
   sudo: True
   tasks:
-  - name: Install deps for usb thing
-    apt: name={{item}} state=installed
+  - apt: name={{item}} state=installed
     with_items:
        - python-usb
        - python-setuptools
 
   - git: repo=https://github.com/padelt/temper-python
        dest=/opt/temper-python
+
+  - shell: "cd /opt/temper-python/; python setup.py"
+        creates=/usr/local/bin/temper-poll
 
   - name: Create a file called '/tmp/testfile.txt' with the content 'hello world'.
     copy: content="hello world\n" dest=/tmp/testfile.txt
