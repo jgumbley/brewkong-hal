@@ -3,7 +3,8 @@
   hosts: all 
   sudo: True
   tasks:
-  - apt: name={{item}} state=installed
+  - name: hello
+    apt: name={{item}} state=installed
     with_items:
        - python-usb
        - python-setuptools
@@ -11,8 +12,8 @@
   - git: repo=https://github.com/padelt/temper-python
        dest=/opt/temper-python
 
-  - shell: "cd /opt/temper-python/; python setup.py"
-        creates=/usr/local/bin/temper-poll
+  - command: python setup.py install
+    args:
+        chdir: /opt/temper-python
+        creates: /usr/local/bin/temper-poll
 
-  - name: Create a file called '/tmp/testfile.txt' with the content 'hello world'.
-    copy: content="hello world\n" dest=/tmp/testfile.txt
