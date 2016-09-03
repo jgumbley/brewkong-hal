@@ -5,5 +5,5 @@ cd /opt/brewkong-hal/
 
 git pull origin master
 
-ansible all -i "localhost," -c local -m shell -a 'echo yo blair'
+ansible-playbook -i "localhost," -c local playbook.yml
 
