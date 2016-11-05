@@ -6,6 +6,8 @@
   - name: apt-get some stuff
     apt: name={{item}} state=installed
     with_items:
+       - htop
+       - multitail
        - python-usb
        - python-setuptools
        - openssh-server
