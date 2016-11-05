@@ -14,7 +14,7 @@
        - python3-usb
        - python3-pip
 
-  - git: repo=https://github.com/xypron/pyrelayctl
-       dest=/opt/pyrelayctl
+  - git: repo=https://github.com/jgumbley/braubuddy
+       dest=/opt/braubuddy
 
 
