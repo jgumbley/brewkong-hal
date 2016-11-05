@@ -1,13 +1,14 @@
 ---
-- name: This is a hello-world example
+- name: Ansible to setup the machine
   hosts: all 
   sudo: True
   tasks:
-  - name: hello
+  - name: apt-get some stuff
     apt: name={{item}} state=installed
     with_items:
        - python-usb
        - python-setuptools
+       - openssh-server
 
   - git: repo=https://github.com/padelt/temper-python
        dest=/opt/temper-python
