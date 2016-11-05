@@ -10,11 +10,7 @@
        - python-setuptools
        - openssh-server
 
-  - git: repo=https://github.com/padelt/temper-python
-       dest=/opt/temper-python
+  - git: repo=https://github.com/xypron/pyrelayctl
+       dest=/opt/pyrelayctl
 
-  - command: python setup.py install
-    args:
-        chdir: /opt/temper-python
-        creates: /usr/local/bin/temper-poll
 
